@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles'
 // import logo from './logo.svg';
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
@@ -7,19 +8,29 @@ import Info from "./pages/Info"
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/info" component={Info} />
-          <Route exact path="/apply" component={Apply} />
-        </Switch>
-      </div>
-    </Router>
-  );
+const styles = theme => ({
+  root: {
+    margin: "0 auto",
+    flexGrow: "1"
+  }
+})
+class App extends Component {
+  render() {
+    const { classes } = this.props
+
+    return (
+      <Router>
+        <div className={classes.root}>
+          <Navbar />
+        </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/info" component={Info} />
+            <Route exact path="/apply" component={Apply} />
+          </Switch>
+      </Router>
+    )
+  }
 }
 
-export default App;
+export default withStyles(styles)(App);
