@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Apply from "./pages/Apply"
 import Info from "./pages/Info"
+import Footer from './components/Footer'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Route exact path="/info" component={Info} />
             <Route exact path="/apply" component={Apply} />
           </Switch>
+          <Footer />
       </Router>
     )
   }

@@ -7,8 +7,7 @@ import Paper from '@material-ui/core/Paper'
 const styles = theme => ({
   root: {
     flexGrow: "1",
-    textAlign: "center",
-    marginTop: "3vh"
+    textAlign: "center"
   },
   container: {
     margin: "0 auto",

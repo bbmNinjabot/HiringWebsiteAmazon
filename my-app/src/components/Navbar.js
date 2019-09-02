@@ -19,22 +19,22 @@ const styles = theme => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    marginLeft: "20px",
-    color: "white",
+    marginLeft: "18px",
+    color: "black",
     textDecoration: "none",
   },
   logo: {
-    maxWidth: 160,
+    maxWidth: 120,
   },
   rightJustify: {
     marginLeft: "auto",
   },
   appbarColor: {
-    background: '#595959',
+    background: '#ffffff',
   },
   navContainer: {
     margin: "0 auto",
-    width: "90%",
+    width: "80%",
   },
   paper: {
     position: 'absolute',
@@ -53,7 +53,13 @@ const styles = theme => ({
     padding: theme.spacing(2,4,3)
   },
   linkButtons: {
-    fontSize: '16px'
+    fontSize: '16px',
+    marginLeft: '8px'
+  },
+  callButton: {
+    fontSize: '16px',
+    marginLeft: '8px',
+    border: '3px solid black'
   }
 })
 
@@ -90,7 +96,7 @@ class Navbar extends Component {
   
     return (
       <div>
-        <AppBar position="static" className={classes.appbarColor}>
+        <AppBar position="fixed" className={classes.appbarColor}>
           <div className={classes.navContainer}>
             <Toolbar>
               {/* <IconButton edge="start" color="inherit" aria-label="menu">
@@ -101,9 +107,9 @@ class Navbar extends Component {
                 Ninja Logistics
               </Typography>
               <div className={classes.rightJustify}>
-                <Button className={classes.linkButtons} color="inherit" id="info-button" component={infoLink}>FAQ</Button>
-                <Button className={classes.linkButtons} color="inherit" id="apply-button" component={applyLink}>Apply Now</Button>
-                <Button className={classes.linkButtons} color="inherit" id="call-button" onClick={this.handleOpen.bind(this)}>Schedule a Callback</Button>
+                <Button className={classes.linkButtons} id="info-button" component={infoLink}>FAQ</Button>
+                <Button className={classes.linkButtons} id="apply-button" component={applyLink}>Apply</Button>
+                <Button className={classes.callButton} id="call-button" onClick={this.handleOpen.bind(this)}>Schedule a Callback</Button>
               </div>
             </Toolbar>
           </div>
@@ -114,8 +120,9 @@ class Navbar extends Component {
         >
           <Paper className={classes.paper}>
             <Typography variant="h6">
-              Modal Test
+              Enter your phone number to receive a callback.
             </Typography>
+            <Button id="submit-button">Submit</Button>
           </Paper>
         </Modal>
       </div>
