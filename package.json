@@ -5,7 +5,7 @@
   "scripts": {
     "client-install": "yarn install --prefix my-app",
     "start": "cd my-app && yarn start",
-    "heroku-postbuild": "cd my-app && yarn && yarn run build"
+    "heroku-postbuild": "cd my-app && yarn install && yarn run build"
   },
   "repository": "git@github.com:bbmNinjabot/HiringWebsiteAmazon.git",
   "author": "Eddie Franco <eddiefranco626@gmail.com>",
