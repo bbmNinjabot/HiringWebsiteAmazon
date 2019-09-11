@@ -23,11 +23,15 @@ const styles = theme => ({
     color: 'black'
   },
   articlePhoto: {
-    maxWidth: '100%'
+    maxWidth: '100%',
+    width: '35%',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 })
 
-class WhereSection extends Component {
+class WhoSection extends Component {
   render() {
     const { classes } = this.props
     return (
@@ -36,17 +40,17 @@ class WhereSection extends Component {
           <Grid container spacing={2}>
             <Grid item xs={6}>
               <Typography className={classes.titleType} variant='h5'>
-                Where
+                Who
               </Typography>
               <Typography className={classes.title} variant='h3'>
-                Longmont, Colorado
+                Ninja Logistics
               </Typography>
               <Typography className={classes.description} variant='p'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We are a locally owned and operated delivery company for Amazon.
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <img src="../assets/images/longmontView.jpg" alt="Amazon Van" className={classes.articlePhoto} />
+              <img src="../assets/images/ninjaGuy.png" alt="Amazon Van" className={classes.articlePhoto} />
             </Grid>
           </Grid>
         </div>
@@ -55,4 +59,4 @@ class WhereSection extends Component {
   }
 }
 
-export default withStyles(styles)(WhereSection)
+export default withStyles(styles)(WhoSection)

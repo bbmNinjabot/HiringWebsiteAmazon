@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Modal from '@material-ui/core/Modal'
 import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import { TextField } from '@material-ui/core';
 // import IconButton from '@material-ui/core/IconButton'
 // import MenuIcon from '@material-ui/icons/Menu'
 
@@ -29,7 +31,7 @@ const styles = theme => ({
   rightJustify: {
     marginLeft: "auto",
   },
-  appbarColor: {
+  appbarStyle: {
     background: '#ffffff',
   },
   navContainer: {
@@ -56,11 +58,17 @@ const styles = theme => ({
     fontSize: '16px',
     marginLeft: '8px'
   },
-  callButton: {
+  applyButton: {
     fontSize: '16px',
     marginLeft: '8px',
     border: '3px solid black'
-  }
+  },
+  submitButton: {
+    border: '2px solid black'
+  },
+  formTitle: {
+    textAlign: 'center'
+  },
 })
 
 const homeLink = React.forwardRef((props, ref) => (
@@ -96,7 +104,7 @@ class Navbar extends Component {
   
     return (
       <div>
-        <AppBar position="fixed" className={classes.appbarColor}>
+        <AppBar position="fixed" className={classes.appbarStyle}>
           <div className={classes.navContainer}>
             <Toolbar>
               {/* <IconButton edge="start" color="inherit" aria-label="menu">
@@ -104,12 +112,12 @@ class Navbar extends Component {
               </IconButton> */}
               <img src="../assets/images/potentialLogo1_v1.png" alt="Ninja Logistics" className={classes.logo} />
               <Typography variant="h3" className={classes.title} component={homeLink}>
-                Ninja Logistics
+                Ninja Logistics CO
               </Typography>
               <div className={classes.rightJustify}>
                 <Button className={classes.linkButtons} id="info-button" component={infoLink}>FAQ</Button>
-                <Button className={classes.linkButtons} id="apply-button" component={applyLink}>Apply</Button>
-                <Button className={classes.callButton} id="call-button" onClick={this.handleOpen.bind(this)}>Schedule a Callback</Button>
+                <Button className={classes.linkButtons} id="call-button" onClick={this.handleOpen.bind(this)}>Schedule a Callback</Button>
+                <Button className={classes.applyButton} id="apply-button" component={applyLink}>Apply</Button>
               </div>
             </Toolbar>
           </div>
@@ -118,11 +126,35 @@ class Navbar extends Component {
           open={this.state.open}
           onClose={this.handleClose.bind(this)}
         >
-          <Paper className={classes.paper}>
-            <Typography variant="h6">
-              Enter your phone number to receive a callback.
-            </Typography>
-            <Button id="submit-button">Submit</Button>
+            <Paper className={classes.paper}>
+              <React.Fragment>
+                <Typography variant="h6" className={classes.formTitle}>
+                  Enter your phone number to receive a callback.
+                </Typography>
+                <Grid container spacing={1}>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      id="fullName"
+                      name="fullName"
+                      label="Full name"
+                      fullWidth
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      label="Phone Number"
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button id="submit-button" className={classes.submitButton}>Submit</Button>
+                  </Grid>
+                </Grid>
+              </React.Fragment>
           </Paper>
         </Modal>
       </div>

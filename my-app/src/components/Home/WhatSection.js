@@ -46,7 +46,7 @@ class WhatSection extends Component {
                 Amazon Van Driver
               </Typography>
               <Typography className={classes.description} variant='p'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We will be delivering packages from Amazon Distribution Center to customer's homes. Each day Amazon will load the vans at the distribution center, after they are loaded we will drive the packages to their final locations. We will also use the Amazon App to track and take a photo of the item for the customer.
               </Typography>
             </Grid>
           </Grid>

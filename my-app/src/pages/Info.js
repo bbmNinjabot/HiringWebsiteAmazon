@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import FirstQ from '../components/Info/FirstQ'
+import SecondQ from '../components/Info/SecondQ'
+import ThirdQ from '../components/Info/ThirdQ'
+import FourthQ from '../components/Info/FourthQ'
 
 const styles = theme => ({
-  root: {
+  infoRoot: {
     flexGrow: "1",
-    textAlign: "center"
+    textAlign: "center",
+    paddingTop: '5vh'
   },
   container: {
     margin: "0 auto",
@@ -21,17 +25,18 @@ class Info extends Component {
   render() {
     const { classes } = this.props
     return (
-      <div className={classes.root}>
+      <div className={classes.infoRoot}>
         <div className={classes.container}>
-          <Grid container spacing={2}>
-            <Grid item xs = {12}>
-              {/* Paper is the white 'container' I have everything group within */}
-              <Paper>
-                <Typography>
-                  Info
-                </Typography>
-              </Paper>
+          <Grid container spacing={0}>
+            <Grid item xs={12}>
+              <Typography variant="h2">
+                Frequently Asked Questions(FAQ)
+              </Typography>
             </Grid>
+            <FirstQ />
+            <SecondQ />
+            <ThirdQ />
+            <FourthQ />
           </Grid>
         </div>
       </div>

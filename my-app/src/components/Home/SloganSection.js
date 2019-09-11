@@ -21,7 +21,8 @@ const styles = theme => ({
     textAlign: 'center',
     paddingTop: '40vh',
     color: 'red',
-    textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
+    textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000',
+    fontWeight: 'bold',
   },
 })
 
@@ -33,7 +34,7 @@ class SloganSection extends Component {
         <div className={classes.sectionContainer}>
           {/* <div className={classes.container}> */}
             <Typography className={classes.slogan} variant='h2'>
-              Insert Clever/Eye-Catch Slogan
+              Do you have what it takes to be a Ninja?
             </Typography>
           {/* </div> */}
         </div>

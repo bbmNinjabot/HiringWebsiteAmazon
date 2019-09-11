@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
 import Grid from '@material-ui/core/Grid'
-import SloganSection from '../components/SloganSection'
-import WhatSection from '../components/WhatSection'
-import WhoSection from '../components/WhoSection'
-import WhereSection from '../components/WhereSection'
+import SloganSection from '../components/Home/SloganSection'
+import WhatSection from '../components/Home/WhatSection'
+import WhoSection from '../components/Home/WhoSection'
+import WhereSection from '../components/Home/WhereSection'
 
 const styles = theme => ({
-  root: {
+  homeRoot: {
     flexGrow: "1",
   },
   paper: {
@@ -19,7 +19,7 @@ class Home extends Component {
   render() {
     const { classes } = this.props
     return (
-      <div className={classes.root}>
+      <div className={classes.homeRoot}>
         <Grid container spacing={0}>
           <SloganSection />
           <WhoSection />

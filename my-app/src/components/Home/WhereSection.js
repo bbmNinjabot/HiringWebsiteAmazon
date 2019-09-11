@@ -23,15 +23,11 @@ const styles = theme => ({
     color: 'black'
   },
   articlePhoto: {
-    maxWidth: '100%',
-    width: '35%',
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    maxWidth: '100%'
   },
 })
 
-class WhoSection extends Component {
+class WhereSection extends Component {
   render() {
     const { classes } = this.props
     return (
@@ -40,17 +36,17 @@ class WhoSection extends Component {
           <Grid container spacing={2}>
             <Grid item xs={6}>
               <Typography className={classes.titleType} variant='h5'>
-                Who
+                Where
               </Typography>
               <Typography className={classes.title} variant='h3'>
-                Ninja Logistics
+                Loveland, Colorado
               </Typography>
               <Typography className={classes.description} variant='p'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We are very proudly based out of Loveland, CO. Our shop location will be within a mile of the Amazon distribution center as well. The shop is near E Eisenhower Blvd and I-25, behind all the retail stores such as Target. 
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <img src="../assets/images/ninjaGuy.png" alt="Amazon Van" className={classes.articlePhoto} />
+              <img src="../assets/images/lovelandView.jpg" alt="Amazon Van" className={classes.articlePhoto} />
             </Grid>
           </Grid>
         </div>
@@ -59,4 +55,4 @@ class WhoSection extends Component {
   }
 }
 
-export default withStyles(styles)(WhoSection)
+export default withStyles(styles)(WhereSection)

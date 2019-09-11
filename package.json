@@ -1,0 +1,13 @@
+{
+  "name": "hiring-website-amazon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "yarn install --prefix my-app",
+    "start": "cd my-app && yarn start",
+    "heroku-postbuild": "cd my-app && yarn && yarn run build"
+  },
+  "repository": "git@github.com:bbmNinjabot/HiringWebsiteAmazon.git",
+  "author": "Eddie Franco <eddiefranco626@gmail.com>",
+  "license": "MIT"
+}
