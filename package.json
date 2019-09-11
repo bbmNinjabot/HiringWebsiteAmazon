@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "client-install": "yarn install --prefix my-app",
+    "client-install": "npm install --prefix my-app",
     "start": "cd my-app && yarn start",
-    "heroku-postbuild": "cd my-app && yarn install && yarn run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCION=false npm install --prefix my-app && npm run build --prefix my-app"
   },
   "repository": "git@github.com:bbmNinjabot/HiringWebsiteAmazon.git",
   "author": "Eddie Franco <eddiefranco626@gmail.com>",
